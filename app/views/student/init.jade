@@ -3,3 +3,16 @@ block content
 
   h2 New Student
 
+  form(method='post', action='/students')
+    label First Name
+    input(name='firstName', type='text', placeholder='Bob', autofocus=true)
+    label Last Name
+    input(name='lastName', type='text', placeholder='Smith')
+    label Email
+    input(name='email', type='text', placeholder='1234@example.com')
+    label Color
+    input(name='color', type='color', value='#ff0000')
+    label Blog
+    input(name='blog', type='text', placeholder='example@wordpress.com')
+    button Create
+

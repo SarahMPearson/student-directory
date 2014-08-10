@@ -2,13 +2,17 @@
 
 var Student = require('../models/student');
 
+exports.index = function(req, res){
+  res.render('home/index');
+};
+
 exports.init = function(req, res){
   res.render('student/init');
 };
 
 exports.create = function(req, res){
   var student = new Student(req.body);
-  student.insert(function(){
+  student.save(function(){
     res.redirect('/students');
   });
 };

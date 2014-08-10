@@ -2,3 +2,17 @@ extends ../../shared/template
 block content
 
   h2 Students
+
+  table
+    thead
+      th First Name
+      th Last Name
+      th Email
+      th Blog
+    tbody
+    each student in students
+      tr(style='background-color: #{student.color}')
+        td= student.firstName
+        td= student.lastName
+        td: a(href='mailto:#{student.email}')= student.email
+        td: a(href='#{student.blog}') Blog
